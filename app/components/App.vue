@@ -2,7 +2,6 @@
     <Page style="background-color: azure;">
         <ActionBar title="Pet Shop"/>
        <Label text="Welcome to the Pet Shop!" class="h2"/>
-        </ScrollView>
     </Page>
 </template>
 
