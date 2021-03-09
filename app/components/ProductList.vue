@@ -26,7 +26,21 @@ export default {
         onItemTap(event) {
             this.$emit('addProduct', event.item);
         }
-    }
+    },
+    created: function () {
+    // this function will be run automatically
+    // when creating the Vue instance.
+    fetch("https://cst3145express.herokuapp.com/collection/lesson").then(
+      (response) => {
+        response.json().then((json) => {
+          // save the returned JSON object to 'product'
+          // note that we used 'webstore.product' instead of this.product'
+          this.products = json;
+        });
+      }
+    );
+  },
+
     
 };
 </script>

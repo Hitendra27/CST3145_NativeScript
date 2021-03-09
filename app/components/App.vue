@@ -3,7 +3,7 @@
         <ActionBar title="Web Shop"/>
        <Label text="Welcome to the Pet Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
-            <TabViewItem title='Product List' class="h2">
+            <TabViewItem title='Product List' class="h2 text-capitalize">
                 <ProductList @addProduct="addToCart"/> <!-- Using the ProductList Component -->
             </TabViewItem>
             <TabViewItem title="Check out" class="h2 text-capitalize">
