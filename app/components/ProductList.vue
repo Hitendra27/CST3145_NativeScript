@@ -20,7 +20,7 @@
 export default {
     data() {
         return {
-            Products: [], // Product Array.
+            products: [], // Product Array.
         };
     },
     methods: {

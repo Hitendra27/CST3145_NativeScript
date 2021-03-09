@@ -1,6 +1,6 @@
 import Vue from 'nativescript-vue';
 
-import PetShop from './components/App';
+import WebShop from './components/App';
 
 // Uncommment the following to see NativeScript-Vue output logs
 // Vue.config.silent = false;
@@ -9,10 +9,10 @@ new Vue({
 
     template: `
         <Frame>
-            <PetShop />
+            <WebShop />
         </Frame>`,
 
     components: {
-        PetShop
+        WebShop
     }
 }).$start();

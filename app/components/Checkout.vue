@@ -8,9 +8,10 @@
       <ListView for="product in cart" @itemTap='onItemTap'>
          <v-template>
             <StackLayout>
-               <Label :text="product.name" />
-               <Label :text="`price: ${product.price}`" />
-               <Label :text="`inventory: ${product.inventory}`" />
+            <Label :text='product.subject'/>
+            <Label :text='product.location'/>
+            <Label :text="`Price: £  ${product.price}`"/>
+            <Label :text="`Space: ${product.availableInventory}`"/>
             </StackLayout>
          </v-template>
       </ListView>

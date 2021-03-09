@@ -1,7 +1,7 @@
 <template>
     <Page style="background-color: azure;">
         <ActionBar title="Web Shop"/>
-       <Label text="Welcome to the Pet Shop!" class="h2"/>
+       <Label text="Welcome to the Web Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
             <TabViewItem title='Product List' class="h2 text-capitalize">
                 <ProductList @addProduct="addToCart"/> <!-- Using the ProductList Component -->
@@ -16,9 +16,11 @@
 <script>
 import ProductList from './ProductList.vue' // import the ProductList component.
 import Checkout from './Checkout.vue' // import the Checkout component.
+
 export default {
     data () {
         return {
+            cart: [],
         };
     },
     components: {ProductList, Checkout}, // register the component.
@@ -26,7 +28,7 @@ export default {
 methods: {
     addTocart(product) {
         this.cart.push(product);
-        alert("Added to cart:" + product.name);
+        alert("Added to cart:" + product);
     },
     removeFromCart(product) {
         for (let i=0; i<this.cart.length; i++) {
