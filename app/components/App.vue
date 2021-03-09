@@ -4,11 +4,10 @@
        <Label text="Welcome to the Pet Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
             <TabViewItem title='Product List' class="h2">
-                <ProductList/> <!-- Using the ProductList Component -->
+                <ProductList @addProduct="addToCart"/> <!-- Using the ProductList Component -->
             </TabViewItem>
-            <TabViewItem title="Check out" class="h2">
-                <Label text='checkout form coming soon ...'
-                class="h2 text-center"/>
+            <TabViewItem title="Check out" class="h2 text-capitalize">
+                <Checkout :cart='cart'/> <!-- the 'Checkout' component -->
             </TabViewItem>
         </TabView>
     </Page>
