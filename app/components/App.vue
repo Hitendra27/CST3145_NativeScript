@@ -4,8 +4,7 @@
        <Label text="Welcome to the Pet Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
             <TabViewItem title='Product List' class="h2">
-                <Label text='Proudct list coming soon ...'
-                class="h2 text-center"/>
+                <ProductList/> <!-- Using the ProductList Component -->
             </TabViewItem>
             <TabViewItem title="Check out" class="h2">
                 <Label text='checkout form coming soon ...'
@@ -16,12 +15,14 @@
 </template>
 
 <script>
+import ProductList from './ProductList.vue' // import the ProductList component.
 export default {
     data () {
         return {
         };
     },
-}
+    components: {ProductList} // register the component.
+};
 </script>
 
 <style scoped>
