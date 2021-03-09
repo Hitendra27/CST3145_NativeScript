@@ -7,7 +7,7 @@
                 <ProductList @addProduct="addToCart"/> <!-- Using the ProductList Component -->
             </TabViewItem>
             <TabViewItem title="Check out" class="h2 text-capitalize">
-                <Checkout :cart='cart'/> <!-- the 'Checkout' component -->
+                <Checkout :cart='cart' @removeProduct='removeFromCart'/> <!-- the 'Checkout' component -->
             </TabViewItem>
         </TabView>
     </Page>
@@ -21,7 +21,11 @@ export default {
         return {
         };
     },
-    components: {ProductList, Checkout} // register the component.
+    components: {ProductList, Checkout}, // register the component.
+ 
+
+
+
 };
 </script>
 
