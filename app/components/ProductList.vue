@@ -1,9 +1,32 @@
 <template>
-    <Label class='h2' text='This is the ProductList component.'/>
+  <StackLayout>
+    <Label class="h2 p-10" textWrap="true"
+      text="Tap a product to add it to cart" />
+    <ListView for='product in products' @itemTap='onItemTap'>
+        <v-template>
+          <StackLayout>
+            <Label :text='product.name'/>
+            <Label :text="`Price: ${product.price}`"/>
+            <Label :text="`Space: ${product.inventory}`"/>
+          </StackLayout>
+        </v-template>
+    </ListView>
+  </StackLayout>
 </template>
+
 
 <script>
 export default {
+    data() {
+        return {
+            Products: [], // Product Array.
+        };
+    },
+    methods: {
+        onItemTap(event) {
+            this.$emit('addProduct', event.item);
+        }
+    }
     
-}
+};
 </script>
