@@ -16,12 +16,13 @@
 
 <script>
 import ProductList from './ProductList.vue' // import the ProductList component.
+import Checkout from './Checkout.vue' // import the Checkout component.
 export default {
     data () {
         return {
         };
     },
-    components: {ProductList} // register the component.
+    components: {ProductList, Checkout} // register the component.
 };
 </script>
 
