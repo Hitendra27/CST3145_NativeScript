@@ -23,7 +23,17 @@ export default {
     },
     components: {ProductList, Checkout}, // register the component.
  
-
+methods: {
+    addTocart(product) {
+        this.cart.push(product);
+        alert("Added to cart:" + product.name);
+    },
+    removeFromCart(product) {
+        for (let i=0; i<this.cart.length; i++) {
+            if (this.cart[i] == product) this.cart.splice(i,1)
+        }
+    },
+}
 
 
 };

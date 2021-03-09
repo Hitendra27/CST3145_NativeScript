@@ -27,6 +27,7 @@ export default {
             this.$emit('addProduct', event.item);
         }
     },
+    
     created: function () {
     // this function will be run automatically
     // when creating the Vue instance.
