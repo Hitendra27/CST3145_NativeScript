@@ -5,9 +5,10 @@
     <ListView for='product in products' @itemTap='onItemTap'>
         <v-template>
           <StackLayout>
-            <Label :text='product.name'/>
-            <Label :text="`Price: ${product.price}`"/>
-            <Label :text="`Space: ${product.inventory}`"/>
+            <Label :text='product.subject'/>
+            <Label :text='product.location'/>
+            <Label :text="`Price: £ ${product.price}`"/>
+            <Label :text="`Space: ${product.availableInventory}`"/>
           </StackLayout>
         </v-template>
     </ListView>
@@ -27,7 +28,7 @@ export default {
             this.$emit('addProduct', event.item);
         }
     },
-    
+
     created: function () {
     // this function will be run automatically
     // when creating the Vue instance.
