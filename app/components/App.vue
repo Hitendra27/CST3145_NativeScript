@@ -1,7 +1,17 @@
 <template>
     <Page style="background-color: azure;">
-        <ActionBar title="Pet Shop"/>
+        <ActionBar title="Web Shop"/>
        <Label text="Welcome to the Pet Shop!" class="h2"/>
+       <TabView androidTabsPosition='bottom'>
+            <TabViewItem title='Product List' class="h2">
+                <Label text='Proudct list coming soon ...'
+                class="h2 text-center"/>
+            </TabViewItem>
+            <TabViewItem title="Check out" class="h2">
+                <Label text='checkout form coming soon ...'
+                class="h2 text-center"/>
+            </TabViewItem>
+        </TabView>
     </Page>
 </template>
 
