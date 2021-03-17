@@ -4,7 +4,7 @@
        <Label text="Welcome to the Web Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
             <TabViewItem title='Product List' class="h2 text-capitalize">
-                <ProductList :products="product" @addProduct="addToCart"/> <!-- Using the ProductList Component -->
+                <ProductList :products="products" @addProduct="addToCart"/> <!-- Using the ProductList Component -->
             </TabViewItem>
             <TabViewItem title="Check out" class="h2 text-capitalize">
                 <Checkout :cart='cart' @removeProduct='removeFromCart'/> <!-- the 'Checkout' component -->
