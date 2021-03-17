@@ -4,7 +4,7 @@
        <Label text="Welcome to the Web Shop!" class="h2"/>
        <TabView androidTabsPosition='bottom'>
             <TabViewItem title='Product List' class="h2 text-capitalize">
-                <ProductList @addProduct="addToCart"/> <!-- Using the ProductList Component -->
+                <ProductList :products="product" @addProduct="addToCart"/> <!-- Using the ProductList Component -->
             </TabViewItem>
             <TabViewItem title="Check out" class="h2 text-capitalize">
                 <Checkout :cart='cart' @removeProduct='removeFromCart'/> <!-- the 'Checkout' component -->
@@ -21,21 +21,40 @@ export default {
     data () {
         return {
             cart: [],
+            products: []
         };
     },
-    components: {ProductList, Checkout}, // register the component.
+    components: {ProductList, Checkout}, // register the components.
  
 methods: {
-    addTocart(product) {
+    addToCart(product) {
         this.cart.push(product);
-        alert("Added to cart:" + product);
+        alert("Added to cart:" + product.item);
     },
     removeFromCart(product) {
         for (let i=0; i<this.cart.length; i++) {
-            if (this.cart[i] == product) this.cart.splice(i,1)
+            this.products.find((prod)=>{
+                if(prod.id===product.id){
+                prod.availableInventory++
+            }
+        })
+            if (this.cart[i].id == product.id) this.cart.splice(i,1)
         }
     },
-}
+},
+    created: function () {
+    // this function will be run automatically
+    // when creating the Vue instance.
+    fetch("https://cst3145express.herokuapp.com/collection/lesson").then(
+      (response) => {
+        response.json().then((json) => {
+          // save the returned JSON object to 'product'
+          // note that we used 'webstore.product' instead of this.product'
+          this.products = json;
+        });
+      }
+    );
+  },
 
 
 };

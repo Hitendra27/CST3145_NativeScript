@@ -5,9 +5,10 @@
     <ListView for='product in products' @itemTap='onItemTap'>
         <v-template>
           <StackLayout>
+            <Image :src="`~/${product.image}`" width="300px" height="100%" stretch="aspectFill"/>
             <Label :text='product.subject'/>
             <Label :text='product.location'/>
-            <Label :text="`Price: £ ${product.price}`"/>
+            <Label :text="`Price: £${product.price}`"/>
             <Label :text="`Space: ${product.availableInventory}`"/>
           </StackLayout>
         </v-template>
@@ -18,9 +19,10 @@
 
 <script>
 export default {
+   props:["products"],
     data() {
         return {
-            products: [], // Product Array.
+          
         };
     },
     methods: {
@@ -29,19 +31,7 @@ export default {
         }
     },
 
-    created: function () {
-    // this function will be run automatically
-    // when creating the Vue instance.
-    fetch("https://cst3145express.herokuapp.com/collection/lesson").then(
-      (response) => {
-        response.json().then((json) => {
-          // save the returned JSON object to 'product'
-          // note that we used 'webstore.product' instead of this.product'
-          this.products = json;
-        });
-      }
-    );
-  },
+    
 
     
 };
