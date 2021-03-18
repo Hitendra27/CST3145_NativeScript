@@ -1,0 +1,19 @@
+
+1. The GitHub repository of NativeScript (CourseWork 3). (Please use Master branch as all the commits 
+ are in this branch).
+ https://github.com/Hitendra27/CST3145_NativeScript/tree/master
+
+
+2.The GitHub repository of back end code (Node and Express).
+ https://github.com/Hitendra27/Coursework2_Backend
+
+
+
+3. The GitHub page that runs the front end (Vue.js).
+ https://hitendra27.github.io/CST3145-coursework1/
+
+
+
+
+4.The Heroku route that returns the information of lesson information.
+ https://cst3145express.herokuapp.com/collection/lesson

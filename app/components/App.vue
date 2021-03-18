@@ -29,7 +29,7 @@ export default {
 methods: {
     addToCart(product) {
         this.cart.push(product);
-        alert("Added to cart:" + product.item);
+        alert("Added to cart:" + product.id);
     },
     removeFromCart(product) {
         for (let i=0; i<this.cart.length; i++) {
