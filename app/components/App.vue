@@ -28,8 +28,14 @@ export default {
  
 methods: {
     addToCart(product) {
-        this.cart.push(product);
-        alert("Added to cart:" + product.id);
+        //this.cart.push(product);
+        //alert("Added to cart:" +  " " + product.subject);
+        let match = this.products.find((item)=>{
+           if(item.id === product.id){
+               item.availableInventory--;
+               this.cart.push(item);
+           }
+       })
     },
     removeFromCart(product) {
         for (let i=0; i<this.cart.length; i++) {
