@@ -1,6 +1,6 @@
 <template>
   <StackLayout>
-    <Label class="h2 p-10" textWrap="true"
+    <Label class="h2 p-10 text-center" textWrap="true"
       text="Tap a product to add it to cart" />
     <ListView for='product in products' @itemTap='onItemTap'>
         <v-template>
@@ -36,3 +36,7 @@ export default {
     
 };
 </script>
+
+<style scoped>
+
+</style>

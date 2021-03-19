@@ -40,7 +40,7 @@ methods: {
     removeFromCart(product) {
         for (let i=0; i<this.cart.length; i++) {
             this.products.find((prod)=>{
-                if(prod.id===product.id){
+                if(prod.id === product.id){
                 prod.availableInventory++
             }
         })
