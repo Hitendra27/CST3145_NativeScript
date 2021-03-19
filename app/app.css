@@ -1,6 +1,6 @@
-@import '~@nativescript/theme/css/core.css';
-@import '~@nativescript/theme/css/aqua.css';
+@import "~@nativescript/theme/css/core.css";
+@import "~@nativescript/theme/css/ruby.css";
 
 .btn {
-    font-size: 18;
+  font-size: 18;
 }

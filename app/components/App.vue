@@ -34,6 +34,7 @@ methods: {
            if(item.id === product.id){
                item.availableInventory--;
                this.cart.push(item);
+               alert("Added to cart:" +  " " + product.subject);
            }
        })
     },
